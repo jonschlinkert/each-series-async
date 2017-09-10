@@ -29,7 +29,7 @@ module.exports = function each(arr, next, cb) {
       cb();
       return;
     }
-    next(arr[i], function(err, ele) {
+    next(arr[i], function(err) {
       if (err) {
         cb(err);
         return;
