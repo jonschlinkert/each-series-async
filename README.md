@@ -20,7 +20,7 @@ var result = [];
 
 each([1, 2, 3, 4, 5, 6], function(ele, next) {
   result.push(ele * (i + 1));
-  next(null, result);
+  next();
 }, function (err) {
   console.log(result);
   //=> [ 1, 4, 9, 16, 25, 36 ]
