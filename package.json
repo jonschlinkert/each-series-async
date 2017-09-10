@@ -1,7 +1,7 @@
 {
   "name": "each-series-async",
   "description": "Asynchronously calls a function on each element in an array in series.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/jonschlinkert/each-series-async",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/each-series-async",
