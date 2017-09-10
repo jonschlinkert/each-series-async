@@ -42,11 +42,18 @@ describe('each', function() {
   it('should run in series', function(cb) {
     this.timeout(10000);
     var res = [];
+    var idx = 0;
     each([1, 2, 3, 4, 5, 6], function(val, next) {
-      setTimeout(function() {
+      idx++;
+      if (idx === 1 || idx === 3 || idx === 5) {
+        setTimeout(function() {
+          res.push(val + val);
+          next();
+        }, 100);
+      } else {
         res.push(val + val);
         next();
-      }, 100);
+      }
     }, function(err) {
       assert.deepEqual(res, [ 2, 4, 6, 8, 10, 12 ]);
       cb();
